@@ -1,0 +1,12 @@
+.post_title
+{
+    font-size:1.6em;
+    font-weight:bolder;
+}
+
+.post_created_at
+{
+    font-size: 1.4em;
+    color: #555555;
+    font-style: oblique;
+}
