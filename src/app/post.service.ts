@@ -36,6 +36,12 @@ export class PostService {
     this.emitPosts();
   }
 
+  removePost(num: number) {
+    this.posts.splice(num, 1);
+    this.savePosts();
+    this.emitPosts();
+  }
+
   savePosts() {
     firebase.database().ref(this.databaseRef).set(this.posts);
   }

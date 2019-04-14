@@ -1,12 +1,21 @@
-<li [ngClass]="{'list-group-item': true, 'list-group-item-success': post.loveIts > 0, 'list-group-item-danger': post.loveIts < 0}" >
+<li
+  [ngClass]="{'list-group-item': true, 'list-group-item-success': post.loveIts > 0, 'list-group-item-danger': post.loveIts < 0}">
+
   <div class="d-flex justify-content-between">
     <span class="post_title"> {{post.title}} </span>
     <span class="post_created_at"> {{post.createdAt | date: 'M/d/yyyy, h:mm a'}} </span>
   </div>
+
   <p> {{post.content}} </p>
-  <div class="d-flex justify-content-between align-items-center rating-div">
-    <button class="btn btn-success" (click)="onLoveIt()">Love it!</button>
-    <button class="btn btn-danger"  (click)="onDontLoveIt()">Don't love it!</button>
-    <span>{{ displayLoveItScore() }}</span>
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-between align-items-center rating-div">
+      <button class="btn btn-outline-success" (click)="onLoveIt()">Love it!</button>
+      <button class="btn btn-outline-danger" (click)="onDontLoveIt()">Don't love it!</button>
+      <span>{{ displayLoveItScore() }}</span>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center">
+      <button class="btn btn-danger" (click)="onDelete()">Delete post</button>
+    </div>
   </div>
 </li>

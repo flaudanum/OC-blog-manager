@@ -10,6 +10,7 @@ import { PostService } from '../post.service';
 export class PostListItemComponent implements OnInit {
 
   @Input() post: Post;
+  @Input() num: number;
 
   private postDate: Date;
 
@@ -27,6 +28,10 @@ export class PostListItemComponent implements OnInit {
   onDontLoveIt(): void {
     this.post.loveIts--;
     this.postService.savePosts();
+  }
+
+  onDelete(): void {
+    this.postService.removePost(this.num);
   }
 
   displayLoveItScore(): string {
