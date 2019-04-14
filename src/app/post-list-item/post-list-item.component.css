@@ -10,3 +10,11 @@
     color: #555555;
     font-style: oblique;
 }
+
+.list-group-item {
+    margin-bottom: 20px;
+}
+
+.rating-div {
+    width: 25%;
+}

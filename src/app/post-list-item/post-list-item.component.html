@@ -4,8 +4,9 @@
     <span class="post_created_at"> {{post.createdAt | date: 'M/d/yyyy, h:mm a'}} </span>
   </div>
   <p> {{post.content}} </p>
-  <div>
+  <div class="d-flex justify-content-between align-items-center rating-div">
     <button class="btn btn-success" (click)="onLoveIt()">Love it!</button>
     <button class="btn btn-danger"  (click)="onDontLoveIt()">Don't love it!</button>
+    <span>{{ displayLoveItScore() }}</span>
   </div>
 </li>
