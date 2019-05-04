@@ -1,3 +1,7 @@
+
+/**
+ * Class for modeling post data
+ */
 export class Post {
     public title: string;
     public content: string;

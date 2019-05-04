@@ -1,27 +1,35 @@
-# BlogManager
+# Blog Manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8. Le fichier `package-lock.json` a volontairement été retiré du dépôt Git par précaution de compatibilité inter-OS. Ainsi ce fichier sera reconstruit lors de l'installation du projet.
 
-## Development server
+## Installation avec npm
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Depuis un terminal, aller dans le répertoire racine du projet et exécuter la commande suivante:
 
-## Code scaffolding
+```bash
+npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Lancer l'application en mode développement
 
-## Build
+Exécutez la commande `ng serve` (ou `ng serve --open`) puis ouvrez votre navigateur à l'adresse [http://localhost:4200/](http://localhost:4200/). Un rafraîchissement automatique de l'application se produira si vous modifiez un fichier source (à l'exception des `export` au sein des modules qui requièrent une recompilation complète).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Documentation
 
-## Running unit tests
+Le commentaires de code suivent le format *typedoc*. Installer *typedoc* avec `npm` comme une dépendance de développement du projet:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm install --save-dev typedoc
+```
 
-## Running end-to-end tests
+ou comme un package global (droits administrateur éventuellement requis):
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+npm install --global typedoc
+```
 
-## Further help
+Pour générer le site de documentation dans un répertoire `./docs` utiliser le CLI de typedoc:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```
+typedoc --out ./docs
+```

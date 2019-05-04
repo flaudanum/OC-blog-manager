@@ -1,3 +1,5 @@
+/** This component manages the creation form for adding a new post */
+
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Post } from '../models/post';
@@ -11,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class CreatePostComponent implements OnInit {
 
+  /** *Reactive form* group */
   private newPostForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private postService: PostService, private router: Router) { }
@@ -31,9 +34,6 @@ export class CreatePostComponent implements OnInit {
     const newPost = new Post(title, content);
 
     this.postService.createNewPost(newPost);
-
-    // Clear the form
-    // this.newPostForm.reset();
 
     this.router.navigate(['/posts']);
   }
